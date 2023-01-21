@@ -1,0 +1,524 @@
+$comforter-font: 'Comforter Brush', cursive
+$neucha-font: 'Neucha', cursive
+$open-font: 'Open Sans', sans-seri
+@mixin btn-style
+  border: 0
+  outline: 0
+  background-color: #183E42
+  backdrop-filter: blur(6px)
+  border-radius: 20px
+  border: 1px solid #278D9F
+  color: #fff
+  font-size: 20px
+  line-height: 22px
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  min-height: 100vh
+  color: #fff
+  background-color: #183312
+  font-family: $neucha-font
+  font-size: 20px
+  font-weight: 400
+  letter-spacing: normal
+  transition: transform .2s ease-in-out
+  background: url("./assets/images/bg_page.webp") center center/cover no-repeat
+
+.wrapper
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  flex: 1
+
+.container
+  max-width: 1750px
+  height: 100%
+  margin: 0 auto
+.link
+  text-decoration: none
+.link:hover
+  filter: invert(84%) sepia(41%) saturate(2085%) hue-rotate(358deg) brightness(540%) contrast(107%)
+  cursor: pointer
+/*Header*/
+.header
+  position: relative
+  background-color: #192F2D
+  z-index: 2
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  padding: 10px 5px
+  color: #fff
+  font-family: $comforter-font
+  &-container
+    width: 100%
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .header-nav
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &__logo
+        width: 48px
+        height: 60px
+        display: block
+        background-image: url("./assets/images/svg/tree.svg")
+        background-size: contain
+        background-repeat: no-repeat
+        cursor: pointer
+        transition: .3s
+        margin-right: 30px
+      &__link
+        display: block
+        font-size: 28px
+        color: #fff
+        text-transform: capitalize
+        margin-right: 30px
+        transition: .3s
+    .header-info
+      display: flex
+      align-items: center
+      justify-content: space-between
+      gap: 20px
+      &__text
+        font-size: 28px
+        color: #ffd900
+        text-transform: capitalize
+      &__timer
+        display: block
+        width: 190px
+        font-size: 30px
+        text-transform: lowercase
+      &__favorite
+        display: block
+        width: 42px
+        height: 42px
+        background: url("./assets/images/ball/favorite.png") center center/cover no-repeat
+        transition: .3s
+        text-align: center
+        line-height: 45px
+        font-size: 24px
+        color: #ff5100
+        font-family: $open-font
+        &-text
+          font-size: 28px
+          color: #ff5100
+          margin-right: 15px
+
+/*Main*/ 
+.main
+  font-family: $neucha-font
+  font-size: 24px
+  font-weight: 400
+  letter-spacing: 1px
+  display: flex
+  flex: 1
+  flex-direction: column
+  &-container
+    height: 100%
+    display: flex
+    flex: 1
+    width: 100%
+    align-items: center
+.blur-back
+  background: rgba(22, 41, 41, 0.5)
+  backdrop-filter: blur(3px)
+
+/*Start page*/ 
+.start-page
+  height: 100%
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  align-content: center
+  flex-direction: column
+  .ball
+    position: absolute
+    background-size: contain
+    background-repeat: no-repeat
+    display: block
+  &__ball1
+    width: 262px
+    height: 472px
+    top: 0px
+    right: 100px
+    background-image: url("./assets/images/ball/gold2.png")
+  &__ball2
+    width: 300px
+    height: 500px
+    top: 0px
+    left: 100px
+    background-image: url("./assets/images/ball/gold1.png")
+  &__ball3
+    width: 224px
+    height: 426px
+    top: 0px
+    background-image: url("./assets/images/ball/red.png")
+  &__title
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    align-content: center
+    width: 500px
+    height: 250px
+    color: #fff
+    text-transform: uppercase
+    font-weight: 400
+    text-align: center
+    border: 3px solid #278D9F
+    border-radius: 25px
+    background-color: rgba(31, 112, 127, .3)
+    backdrop-filter: blur(6px)
+    font-size: 48px
+    margin-bottom: 80px
+  &__btn
+    width: 320px
+    height: 54px
+    background: radial-gradient(118.88% 606.86% at 0% 0%, rgba(36, 197, 219, 0.15) 0%, rgba(36, 197, 219, 0) 10%)
+    backdrop-filter: blur(31px)
+    border-radius: 30px
+    border: 3px solid #278D9F
+    font-family: $neucha-font
+    font-size: 24px
+    line-height: 29px
+    text-align: center
+    color: #FFFFFF
+
+/*Toys Section*/
+.toys
+  width: 100%
+  height: 100%
+  padding: 10px
+  display: flex
+  flex-wrap: wrap
+  .title
+    font-size: 20px
+    line-height: 1.2
+    color: #FFFFFF
+    margin-bottom: 20px
+    text-align: center
+  .filter-name
+    font-size: 18px
+    line-height: 1.2
+  .toys-filters
+    max-width: 450px
+    max-height: 100%
+    display: flex
+    flex-direction: column
+    gap: 20px
+    padding: 15px
+    align-items: center
+    justify-content: flex-start
+    font-family: $neucha-font
+    border: 1px solid #278d9f
+    border-radius: 10px
+    background-color: rgba(31, 112, 127, .3)
+    backdrop-filter: blur(6px)
+    .box
+      display: flex
+      gap: 20px
+      align-items: center
+      justify-content: flex-start
+      margin-bottom: 20px
+
+    .filter-item
+      width: 30px
+      height: 30px
+      border: 0
+      outline: 0
+      background-color: transparent
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center center
+      cursor: pointer
+      transition: .3s
+
+    .filters-value
+      text-align: left
+      width: 100%
+      .filter-shape
+        .filter-item:hover,
+        .filter-item.active
+          filter: invert(37%) sepia(96%) saturate(3034%) hue-rotate(1deg) brightness(103%) contrast(107%)
+        .filter-item:nth-child(2)
+          background-image: url("./assets/images/svg/ball.svg")
+        .filter-item:nth-child(3)
+          background-image: url("./assets/images/svg/bell.svg")
+        .filter-item:nth-child(4)
+          background-image: url("./assets/images/svg/cone.svg")
+        .filter-item:nth-child(5)
+          background-image: url("./assets/images/svg/snowflake.svg")
+        .filter-item:nth-child(6)
+          background-image: url("./assets/images/svg/toy.svg")
+      .filter-color
+        .filter-item
+          border-radius: 5px
+          width: 25px
+          height: 25px
+          position: relative
+        .filter-item.active::after
+          content: ''
+          display: block
+          position: absolute
+          top: 4px
+          left: 8px
+          width: 6px
+          height: 10px
+          border: solid #000000
+          border-width: 0 4px 4px 0
+          transform: rotate(45deg)
+        .filter-item:nth-child(2)
+          background-color: #fff
+        .filter-item:nth-child(3)
+          background-color: #fdd700
+        .filter-item:nth-child(4)
+          background-color: #fd0000
+        .filter-item:nth-child(5)
+          background-color: #2600fd
+        .filter-item:nth-child(6)
+          background-color: #00fd61
+        .filter-item:hover
+          box-shadow: 0 0 8px #ffffff
+          filter: none
+
+      .filter-size
+        .filter-item
+          background-image: url("./assets/images/svg/ball.svg")
+          width: 45px
+          height: 45px
+        .filter-item:hover,
+        .filter-item.active
+          filter: invert(37%) sepia(96%) saturate(3034%) hue-rotate(1deg) brightness(103%) contrast(107%)
+        .filter-item:nth-child(3)
+          width: 35px
+          height: 35px
+        .filter-item:nth-child(4)
+          width: 28px
+          height: 28px
+      .filter-loved
+        margin-bottom: 0
+        position: relative
+        .filter-loved__label
+          font-size: 1.1rem
+          cursor: pointer
+          .filter-loved__checkbox
+            display: block
+            width: 25px
+            height: 25px
+            backdrop-filter: blur(6px)
+            border: 1px solid #278D9F
+            border-radius: 5px
+            cursor: pointer
+            transition: .5s
+            position: absolute
+            top: 0
+            left: 0
+            margin-left: 145px
+            &::after
+              content: ''
+              display: block
+              position: absolute
+              top: 3px
+              left: 8px
+              width: 6px
+              height: 10px
+              border: solid #fff
+              border-width: 0 4px 4px 0
+              transform: rotate(45deg)
+              opacity: 0
+              cursor: pointer
+              z-index: 2
+            &:hover
+              box-shadow: 0 0 8px #ffffff
+              border: 1px solid #164d57
+          .filter-loved__input
+            -webkit-appearance: none
+            appearance: none
+            position: absolute
+          .filter-loved__input:checked + .filter-loved__checkbox::after
+            opacity: 1
+    .filter-range
+      .slider-container
+        display: flex
+        max-width: 300px
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        margin: 20px 0
+        gap: 15px
+
+        .output-wrap
+          display: flex
+          flex-wrap: wrap
+          justify-content: space-between
+          align-items: center
+          gap: 140px
+          .count-min
+            margin-left: 12px
+          .output
+            display: inline-flex
+            justify-content: center
+            align-items: center
+            min-width: 72px
+            height: 40px
+            @include btn-style
+
+        .slider-quantity,
+        .slider-year
+          display: inline-block
+          height: 6px
+          width: 300px
+          margin-right: 7px
+          .noUi-handle::after,
+          .noUi-handle::before
+            display: none
+          .noUi-handle
+            width: 22px
+            height: 22px
+            border-radius: 100%
+            background-color: #fff
+            border: 3px solid #183312
+            top: -9px
+            cursor: pointer
+    .filter-sort
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      .filter-search
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        margin-bottom: 20px
+        gap: 10px
+        .search
+          width: 320px
+          height: 40px
+          outline: none
+          padding: 0 10px
+          font-size: 20px
+          line-height: 22px
+          text-align: left
+          font: inherit
+          @include btn-style
+
+        .search::placeholder
+          color: #ffee00
+          font-size: 20px
+          padding-left: 20px
+
+      .filter-sort__select
+        appearance: none
+        font: inherit
+        width: 320px
+        height: 40px
+        padding: 5px 25px
+        margin-bottom: 115px
+        background-image: url("./assets/images/svg/arrow-down.svg")
+        background-size: 20px
+        background-repeat: no-repeat
+        background-position: 280px center
+        cursor: pointer
+        @include btn-style
+      .btn
+        width: 180px
+        height: 40px
+        font: inherit
+        @include btn-style
+
+  .toys-container
+    display: flex
+    width: 100%
+    height: 1100px
+    flex: 2
+    flex-wrap: wrap
+    padding-left: 20px
+    overflow-y: scroll
+    font-family: $open-font
+    .toys-wrapper
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      justify-content: flex-start
+      gap: 20px
+      .toy-card
+        display: flex
+        flex-direction: column
+        padding: 10px
+        width: 300px
+        height: 245px
+        border-radius: 10px
+        border: 1px solid #278D9F
+        background-color: rgba(31, 112, 127, .3)
+        backdrop-filter: blur(6px)
+        cursor: pointer
+        .title
+          font-size: 18px
+          margin-bottom: 18px
+        .toy-wrap
+          display: flex
+          flex-wrap: wrap
+          justify-content: space-between
+          gap: 5px
+          font-size: 16px
+          .toy-img
+            width: 90px
+            height: 112px
+            object-fit: contain
+          .toy-card__description
+            display: flex
+            flex-direction: column
+            gap: 10px
+            text-transform: capitalize
+            font-size: 16px
+      .toy-card:hover
+        box-shadow: 0 0 10px 5px #3fbdd3
+        transition: all 0.3s ease-out
+      .favorite,
+      .favorite:hover
+        box-shadow: 0 0 15px 5px #0bfd47
+        transition: all 0.3s ease-out
+
+/*Footer*/
+.footer
+  max-height: 50px
+  background-color: #192F2D
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 10px 5px
+  color: #fff
+  font-family: $comforter-font
+  &-container
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .footer-link
+      font-size: 24px
+      color: #fff
+      text-transform: capitalize
+    .footer-time
+      font-size: 30px
+    .rsschool-link
+      display: block
+      width: 54px
+      height: 20px
+      background-image: url("./assets/images/svg/rss.svg")
+      background-size: contain
+      background-repeat: no-repeat
+      cursor: pointer
+
+.show
+  display: flex
+.hide
+  display: none

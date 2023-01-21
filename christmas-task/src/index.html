@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas task</title>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Neucha&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="./assets/images/favicon.ico">
+</head>
+<body>
+  <div class="wrapper">
+    <!--Header-->
+    <header class="header">
+      <div class="container header-container">
+        <nav class="header-nav">
+          <a href="#" class="link header-nav__logo"></a>
+          <a href="#" class="link header-nav__link toys-page">Игрушки</a>
+          <!-- <a href="#" class="link header-nav__link">Ёлка</a> -->
+        </nav>
+        <div class="header-info">
+          <div class="header-info__favorite">0</div>
+          <span class="header-info__favorite-text">Избранное</span>
+          <span class="header-info__text">До Нового Года осталось</span>
+          <span class="header-info__timer">358 дней</span>
+        </div>
+      </div>
+    </header>
+
+    <!--Main-->
+    <main class="main blur-back">
+      <div class="container main-container">
+        <!--Start page-->
+        <section class="start-page show">
+          <div class="ball start-page__ball1"></div>
+          <div class="ball start-page__ball2"></div>
+          <div class="ball start-page__ball3"></div>
+          <h1 class="start-page__title">Новогодняя игра "Наряди Ёлку"</h1>
+          <button class="link start-page__btn">Начать игру</button>
+        </section>
+        <!--Toys-->
+        <section class="toys hide">
+          <!--Toys filters-->
+          <div class="toys-filters">            
+            <div class="filters-value">
+              <h3 class="title">Фильтры по значению</h3>
+              <div class="box filter-shape">
+                <span class="filter-name">Форма:  </span>
+                <div class="filter-item" data-filter="ball" data-f="shape"></div>
+                <div class="filter-item" data-filter="bell" data-f="shape"></div>
+                <div class="filter-item" data-filter="cone" data-f="shape"></div>
+                <div class="filter-item" data-filter="snowflake" data-f="shape"></div>
+                <div class="filter-item" data-filter="figurine" data-f="shape"></div>
+              </div>
+              <div class="box filter-color">
+                <span class="filter-name">Цвет:   </span>
+                <div class="filter-item" data-filter="white" data-f="color"></div>
+                <div class="filter-item" data-filter="yellow" data-f="color"></div>
+                <div class="filter-item" data-filter="red" data-f="color"></div>
+                <div class="filter-item" data-filter="blue" data-f="color"></div>
+                <div class="filter-item" data-filter="green" data-f="color"></div>
+              </div>
+              <div class="box filter-size">
+                <span class="filter-name">Размер:  </span>
+                <div class="filter-item" data-filter="big" data-f="size"></div>
+                <div class="filter-item" data-filter="middle" data-f="size"></div>
+                <div class="filter-item" data-filter="small" data-f="size"></div>
+              </div>
+              <div class="box filter-loved">
+                <label class="filter-loved__label" >
+                  Только любимые:
+                  <input type="checkbox" class="filter-loved__input" data-filter="lovely" data-f="love">
+                  <span class="filter-loved__checkbox"></span>                  
+                </label>
+              </div>
+            </div>
+            <div class="filter-range">
+              <h3 class="title">Фильтры по диапазону</h3>
+              <div class="filter-quantity">
+                <span class="filter-name">Количество экземпляров:</span>
+                <div class="slider-container">
+                  <div class="slider-quantity" id="slider-quantity"></div>
+                  <div class="output-wrap">
+                    <output class="output count-min">1</output>
+                    <output class="output count-max">12</output>
+                  </div>
+                </div>
+              </div>
+              <div class="filter-year">
+                <span class="filter-name">Год приобретения:</span>
+                <div class="slider-container">
+                  <div class="slider-year" id="slider-year"></div>
+                  <div class="output-wrap">
+                    <output class="output count-min">1940</output>
+                    <output class="output count-max">2020</output>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+            <div class="filter-sort">
+              <div class="filter-search">
+                <input class="search" type="search" placeholder="Поиск игрушек" autocomplete="off">
+              </div>              
+              <h3 class="title">Сортировка</h3>
+              <select class="filter-sort__select">
+                <option value="ascendingByName" class="filter-sort__option">По названию от "А" до "Я"</option>
+                <option value="descendingByName" class="filter-sort__option">По названию от "Я" до "А"</option>
+                <option value="ascendingByQuantity" class="filter-sort__option">По количеству по возрастанию</option>
+                <option value="descendingByQuantity" class="filter-sort__option">По количеству по убыванию</option>
+              </select>
+              <div class="filter-reset__wrap">
+                <button class="btn reset__btn">Сбросить фильтры</button>
+                <button class="btn reset__btn-settings">Сбросить настройки</button>
+              </div>
+            </div>
+          </div>
+          <!--Toys container-->
+          <div class="toys-container">
+            <div class="toys-wrapper">
+              <!-- <div class="toy-card">
+                <h3 class="title">Большой шар с рисунком</h3>
+                <div class="toy-wrap">
+                  <img src="./assets/images/toys/1.webp" alt="Christmas toys 1" class="toy-img">
+                  <div class="toy-card__description filter-name">
+                    <p>Количество:
+                      <span class="quantity">2</span>
+                    </p>
+                    <p>Год покупки:
+                      <span class="year">1960</span>
+                    </p>
+                    <p>Форма:
+                      <span class="shape">шар</span>
+                    </p>
+                    <p>Цвет:
+                      <span class="color">желтый</span>
+                    </p>
+                    <p>Размер:
+                      <span class="size">большой</span>
+                    </p>
+                    <p>Любимая:
+                      <span class="loved">нет</span>
+                    </p>
+                  </div>
+                </div>              
+              </div>
+              <div class="toy-card">
+                <h3 class="title">Зелёный шар с цветами</h3>
+                <div class="toy-wrap">
+                  <img src="./assets/images/toys/2.webp" alt="Christmas toys 2" class="toy-img">
+                  <div class="toy-card__description filter-name">
+                    <p class="quantity">Количество:
+                      <span>5</span>
+                    </p>
+                    <p class="year">Год покупки:
+                      <span>2000</span>
+                    </p>
+                    <p class="shape">Форма:
+                      <span>шар</span>
+                    </p>
+                    <p class="color">Цвет:
+                      <span>зелёный</span>
+                    </p>
+                    <p class="size">Размер:
+                      <span>большой</span>
+                    </p>
+                    <p class="loved">Любимая:
+                      <span>нет</span>
+                    </p>
+                  </div>
+                </div>              
+              </div>
+              <div class="toy-card">
+                <h3 class="title">Красный матовый шар</h3>
+                <div class="toy-wrap">
+                  <img src="./assets/images/toys/3.webp" alt="Christmas toys 3" class="toy-img">
+                  <div class="toy-card__description filter-name">
+                    <p class="quantity">Количество:
+                      <span>3</span>
+                    </p>
+                    <p class="year">Год покупки:
+                      <span>1990</span>
+                    </p>
+                    <p class="shape">Форма:
+                      <span>шар</span>
+                    </p>
+                    <p class="color">Цвет:
+                      <span>красный</span>
+                    </p>
+                    <p class="size">Размер:
+                      <span>большой</span>
+                    </p>
+                    <p class="loved">Любимая:
+                      <span>нет</span>
+                    </p>
+                  </div>
+                </div>              
+              </div>
+              <div class="toy-card">
+                <h3 class="title">Сосулька красная</h3>
+                <div class="toy-wrap">
+                  <img src="./assets/images/toys/4.webp" alt="Christmas toys 4" class="toy-img">
+                  <div class="toy-card__description filter-name">
+                    <p class="quantity">Количество:
+                      <span>2</span>
+                    </p>
+                    <p class="year">Год покупки:
+                      <span>1980</span>
+                    </p>
+                    <p class="shape">Форма:
+                      <span>фигурка</span>
+                    </p>
+                    <p class="color">Цвет:
+                      <span>красный</span>
+                    </p>
+                    <p class="size">Размер:
+                      <span>большой</span>
+                    </p>
+                    <p class="loved">Любимая:
+                      <span>нет</span>
+                    </p>
+                  </div>
+                </div>              
+              </div>
+              <div class="toy-card">
+                <h3 class="title">Красный виноград</h3>
+                <div class="toy-wrap">
+                  <img src="./assets/images/toys/5.webp" alt="Christmas toys 5" class="toy-img">
+                  <div class="toy-card__description filter-name">
+                    <p class="quantity">Количество:
+                      <span>4</span>
+                    </p>
+                    <p class="year">Год покупки:
+                      <span>1980</span>
+                    </p>
+                    <p class="shape">Форма:
+                      <span>фигурка</span>
+                    </p>
+                    <p class="color">Цвет:
+                      <span>красный</span>
+                    </p>
+                    <p class="size">Размер:
+                      <span>средний</span>
+                    </p>
+                    <p class="loved">Любимая:
+                      <span>да</span>
+                    </p>
+                  </div>
+                </div>              
+              </div> -->
+            </div>            
+          </div>
+        </section>
+      </div>
+    </main>    
+    <!--Footer-->
+    <footer class="footer">
+      <div class="container footer-container">
+        <a href="https://github.com/pylkonata" class="link footer-link">PylkoNata</a>
+        <time class="footer-time">2022</time>
+        <a href="https://rs.school/js/" class="link rsschool-link"></a>
+      </div>
+    </footer>
+    <template id="toyCardTemp">
+      <div class="toy-card">
+        <h3 class="title"></h3>
+        <div class="toy-wrap">
+          <img src="" alt="" class="toy-img">
+          <div class="toy-card__description filter-name">
+            <p>Количество:
+              <span class="quantity"></span>
+            </p>
+            <p>Год покупки:
+              <span class="year"></span>
+            </p>
+            <p>Форма:
+              <span class="shape"></span>
+            </p>
+            <p>Цвет:
+              <span class="color"></span>
+            </p>
+            <p>Размер:
+              <span class="size"></span>
+            </p>
+            <p>Любимая:
+              <span class="loved"></span>
+            </p>
+          </div>
+        </div>              
+      </div>
+    </template>
+  </div>
+</body>
+</html>
