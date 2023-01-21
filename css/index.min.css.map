@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,IAAI,AAAC,CACH,UAAU,CAAE,KAAK,CACjB,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,WAAW,CAAE,MAAM,CACnB,eAAe,CAAE,MAAM,CACvB,KAAK,CAAE,KAAK,CACZ,cAAc,CAAE,SAAS,CACzB,gBAAgB,CAAE,OAAO,CAAG,AAE9B,AAAA,EAAE,AAAC,CACD,KAAK,CAAE,OAAO,CAAG,AAEnB,AAAA,GAAG,AAAC,CACF,KAAK,CAAE,IAAI,CACX,SAAS,CAAE,KAAK,CAAG",
-    "sources": [
-        "../christmas-task/index.sass"
-    ],
-    "names": [],
-    "file": "index.min.css"
-}
